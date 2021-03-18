@@ -1,0 +1,18 @@
+.img {
+    width: 75px;
+    height: 75px;
+}
+
+.email {
+    font-weight: bold;
+    color: blue;
+}
+
+.date {
+    color: brown;
+}
+
+.message {
+    font-style: italic;
+    color: green;
+}

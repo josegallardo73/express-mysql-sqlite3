@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de productos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Agregar productos</h1>
+        <form action="/api/productos/add" id="form" method="POST" enctype="application/x-www-form-urlencoded">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" class="form-control" placeholder="Enter title">
+                </div>
+                <div class="form-group">
+                    <label for="price">Price</label>
+                <input type="number" id="price" name="price" class="form-control" placeholder="Enter price">
+                </div>
+                <div class="form-group">
+                    <label for="thumbnail">Photo URL</label>
+                    <input type="text" id="thumbnail" name="thumbnail" class="form-control" placeholder="Enter URL image">
+                </div>
+                <div>
+                    <input type="submit" class="btn btn-primary">
+                </div>
+        </form>
+        <table class="table table-dark table-hover mt-5">
+            <thead id="head">
+              
+            </thead>
+            <tbody id="results">
+
+            </tbody>
+        </table>
+        <form id="chat">
+            <div class="form-group w-50">
+                <input type="email" id="email" placeholder="Your email here" class="form-control">
+            </div>
+            <div class="form-group w-50">
+                <input type="text" id="message" class="form-control" placeholder="Send a message">
+                   
+            </div>
+            <input type="submit" value="Enviar" class="btn btn-primary"> 
+        </form>
+        <hr>
+        <div id="messages">
+
+        </div>
+    </div>  
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
